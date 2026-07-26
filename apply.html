@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <title>Apply to Bellgrave University</title>
+  </head>
+  <body>   
+  <!-- SAME HEADER FROM INDEX.HTML -->
+    <header>
+    <section class="utility-bar">
+    <!-- University Crest -->
+    <div class="utility-logo">
+        <a href="index.html">
+            <img src="images/bellgrave-seal.png" alt="Bellgrave University Seal">
+                    <div class="logo-text">
+            <span class="logo-name">
+                Bellgrave University
+            </span>
+            <span class="logo-motto">
+                Scientia Per Concordiam
+            </span>
+        </div>
+        </a>
+    </div>
+    </section>
+    </header>
+    <section class="application-page">
+    <div class="application-card">
+        <h2>
+            Student Candidate Application
+        </h2>
+        <form action="https://formspree.io/f/xzdnkbol" method="POST">
+                <input type="hidden"   name="_subject" value="New Bellgrave Student Application">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+            <div class="form-grid">
+                <div>
+                    <label>Applicant Name</label>
+                   <textarea 
+            name="janitorai_username"
+            placeholder="Enter your Janitor.ai username"></textarea>
+                </div>
+                <div>
+                    <label>Student Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label>Age</label>
+                    <input type="number" name="age">
+                </div>
+                <div>
+                    <label>Species</label>
+                    <input type="text" name="species">
+                </div>
+                <div>
+                    <label>Gender</label>
+                    <input type="text" name="gender">
+                </div>
+            </div>
+            <label>Requested Major</label>
+            <input 
+            type="text" 
+            name="major">
+            <label>Background</label>
+            <textarea 
+            name="background"
+            placeholder="Tell Bellgrave about this student's history..."></textarea>
+            <label>Personality</label>
+            <textarea
+            name="personality"
+            placeholder="Describe their personality, traits, and behaviour..."></textarea>
+            <label>Additional Information</label>
+            <textarea
+            name="additional"
+            placeholder="Anything else the Admissions Council should know?"></textarea>
+            <button type="submit">
+                Submit Application
+            </button>
+        </form>
+    </div>
+</section>
+  </body>
+</html>

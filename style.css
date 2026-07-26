@@ -1,0 +1,639 @@
+/* ==========================================
+   BELLGRAVE DESIGN SYSTEM
+========================================== */
+:root {
+    /* University Colors */
+    --bellgrave-green: #14382D;
+    --bellgrave-green-light: #245C4A;
+    --bellgrave-gold: #C9A44C;
+    --bellgrave-ivory: #F8F5EF;
+    --bellgrave-charcoal: #262626;
+    --bellgrave-light-gray: #E5E5E5;
+
+        /* Typography */
+    --heading-font: "Cormorant Garamond", serif;
+    --body-font: "Inter", sans-serif;
+}
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+body {
+    font-family: var(--body-font);
+    color: var(--bellgrave-charcoal);
+    background-color: var(--bellgrave-green);
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+/* ==========================================
+                 HEADER
+========================================== */
+/*  Utility Logo */
+.utility-logo img {
+    height: 5rem;
+    width: auto;
+}
+.utility-logo a {
+    display:flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+.logo-name {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--bellgrave-ivory);
+    font-weight: 600;
+    line-height: 1.5;
+}
+.logo-motto {
+    font-family: var(--body-font);
+    font-size: 0.65rem;
+    color: var(--bellgrave-gold);
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+/* Utility Bar */
+.utility-bar {
+    /* Layout */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* Size & spacing */
+    padding: 0.75rem 2rem;
+    /* Appearance */
+    background-color: var(--bellgrave-green);
+    border-bottom: 2px solid var(--bellgrave-gold);;
+}
+.utility-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+/* Utility Navigation */
+.utility-bar ul {
+    /* Layout */
+    display: flex;
+    gap: 3rem;
+   /* Appearance */
+   list-style: none;
+   padding-right: 3rem;
+}
+/* Utility Navigation Links */
+.utility-bar a {
+    color: var(--bellgrave-ivory);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+.utility-bar a:hover {
+    color: var(--bellgrave-gold);
+    text-shadow: 0 0 8px rgba(201, 164, 76, 0.5);
+}
+/* Search Box */
+.utility-bar input {
+    width: 25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--bellgrave-light-gray);
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+}
+.utility-bar input:focus {
+    outline: none;
+    border-color: var(--bellgrave-gold);
+    box-shadow: 0 0 0 3px rgba(201, 164, 76, 0.25);
+}
+.utility-bar input::placeholder {
+    color: #777;
+}
+
+/* ==========================================
+                 HERO
+========================================== */
+/* Background */
+.hero {
+    min-height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/Bellgrave-background.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  z-index: -1;
+}
+/* Ttle + Motto */
+.hero-title {
+    margin: 0;
+}
+/* DARK/BLUR OVERLAY + CONTENT CONTAINER */
+.hero-overlay {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px; /* moves everything slightly upward */
+}
+/* TITLE */
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+}
+/* MOTTO */
+.hero-motto {
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+/* BUTTON CONTAINER */
+.hero-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+/* BOTH BUTTONS */
+.hero-buttons a {
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+/* PRIMARY BUTTON */
+.button-primary {
+  background-color: var(--bellgrave-ivory);
+  color: var(--bellgrave-green);
+}
+/* SECONDARY BUTTON */
+.button-secondary {
+  background-color: var(--bellgrave-green-light);
+  color: var(--bellgrave-ivory);
+  border: 1px solid var(--bellgrave-charcoal);
+}
+/* HOVER EFFECT */
+.hero-buttons a:hover {
+  transform: translateY(-5px);
+}
+.hero-title,
+.hero-motto {
+  text-shadow: 0 3px 15px rgba(0,0,0,0.5);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bellgrave-green-light);
+}
+::-webkit-scrollbar-track:hover {
+    background: var(--bellgrave-green);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bellgrave-green);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bellgrave-green-light);
+}
+
+/* Navigation section */
+.main-nav {
+    width:100%;
+    position:relative;
+    margin-top: 0px;
+    z-index:5;
+    overflow:hidden;
+    height: 25rem;
+}
+.nav-scroll {
+    width:100%;
+    height: 25rem;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:60px 10px 10px;
+    box-sizing:border-box;
+}
+.nav-scroll ul {
+    display:flex;
+    gap: 20px;
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:max-content;
+}
+.nav-scroll li {
+    flex-shrink:0;
+}
+.nav-card {
+    width:430px;
+    height:330px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    text-decoration:none;
+    color:white;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 12px 30px rgba(0,0,0,0.3);
+    transition:transform .3s ease;
+}
+.nav-card:hover {
+    transform:translateY(-8px);
+}
+.nav-card::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(15,35,25,0.45),
+        rgba(15,35,25,0.25)
+    );
+}
+.nav-card span {
+    position:relative;
+    z-index:2;
+    font-family:"Cormorant Garamond", serif;
+    font-size:2.5rem;
+    letter-spacing:2px;
+}
+.nav-scroll::-webkit-scrollbar {
+    height:0px;
+}
+.admissions {
+    background-image:url("images/admissions.png");
+}
+.academics {
+    background-image:url("images/academics.png");
+}
+.research {
+    background-image:url("images/research.png");
+}
+.student-life {
+    background-image:url("images/student-life.png");
+}
+.athletics {
+    background-image:url("images/athletics.png");
+}
+.news {
+    background-image:url("images/news.png");
+}
+
+/* ==========================================
+         GENERAL HOMEPAGE STYLE
+========================================== */
+.homepage-section {
+    width:100%;
+    padding:70px 8%;
+    box-sizing:border-box;
+}
+.section-header {
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 40px;
+}
+.section-header h2,
+.about h2,
+.campus-text h2 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.5rem;
+    color:var(--bellgrave-green);
+    margin-bottom:20px;
+}
+.section-header p,
+.about p,
+.campus-text p {
+    font-family:"Source Sans 3", sans-serif;
+    font-size:1.2rem;
+    line-height:1.7;
+    color:var(--bellgrave-ivory);
+}
+.section-button {
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 35px;
+    background:var(--bellgrave-green-light);
+    color:var(--bellgrave-charcoal);
+    text-decoration:none;
+    font-family:"Libre Baskerville", serif;
+    border:1px solid var(--bellgrave-gold);
+    transition:.3s ease;
+}
+.section-button:hover {
+    background:var(--bellgrave-green);
+    color:var(--bellgrave-ivory);
+}
+
+/* Statistics */
+.statistics {
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    color:var(--bellgrave-light-gray);
+}
+.stat {
+    text-align:center;
+}
+.stat h3 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.5rem;
+    color:var(--bellgrave-gold);
+    margin:0;
+}
+.stat p {
+    font-family:"Source Sans 3", sans-serif;
+    letter-spacing:1px;
+}
+
+/* Academics */
+.academics-preview h2{
+    color: var(--bellgrave-ivory);
+}
+.academic-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.academic-card {
+    background:var(--bellgrave-ivory);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+.academic-card img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+.academic-card div {
+    padding:25px;
+}
+.academic-card h3 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2rem;
+    color:var(--bellgrave-green);
+}
+
+/* News */
+.news-section h2{
+    color: var(--bellgrave-ivory);
+}
+.news-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.news-card {
+    background:var(--bellgrave-ivory);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+.news-card img {
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+.news-content {
+    padding:25px;
+}
+.news-content span {
+    color:var(--bellgrave-green);
+    text-transform:uppercase;
+    font-size:.8rem;
+    letter-spacing:2px;
+}
+
+/* Campus */
+.campus {
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+.campus-image {
+    width:55%;
+}
+.campus-image img {
+    width:100%;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+.campus-text {
+    width:45%;
+}
+
+/* About */
+.about-content h2 {
+    color:var(--bellgrave-ivory);
+}
+.about {
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+.about-image {
+    width:50%;
+}
+.about-image img {
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.2);
+}
+.about-content {
+    width:50%;
+}
+.section-label {
+    color:#b08d2c;
+    letter-spacing:4px;
+    font-size:.9rem;
+    font-family:"Libre Baskerville", serif;
+}
+.about-content h2 {
+    font-size:4rem;
+}
+
+/* Events */
+.events {
+    color:var(--bellgrave-ivory);
+}
+.events h2 {
+    color:var(--bellgrave-ivory);
+}
+.events p {
+    color:var(--bellgrave-light-gray);
+}
+.event-list {
+    max-width:900px;
+    margin:auto;
+}
+.event {
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:30px 0;
+    border-bottom:
+    1px solid rgba(255,255,255,.25);
+}
+.event time {
+    width:100px;
+    text-align:center;
+    font-family:"Libre Baskerville", serif;
+    color:#d2ae55;
+    font-size:1rem;
+}
+.event time strong {
+    font-family:"Cormorant Garamond", serif;
+    font-size:3rem;
+}
+.event h3 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2rem;
+    margin:0;
+}
+
+/* Student Life */
+.student-life-section h2{
+    color: var(--bellgrave-ivory);
+}
+.life-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.life-card {
+    position:relative;
+    height:350px;
+    overflow:hidden;
+}
+.life-card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+.life-card div {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:30px;
+    color:white;
+    background:
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.8)
+    );
+}
+.life-card h3 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2.5rem;
+}
+.life-card:hover img {
+    transform:scale(1.08);
+}
+
+/* ==========================================
+         APPLICATION PAGE
+========================================== */
+.application-page {
+    min-height:100vh;
+    background:
+    linear-gradient(
+        rgba(10,25,45,0.65),
+        rgba(10,25,45,0.65)
+    ),
+    url("../images/library.jpg");
+    background-size:cover;
+    padding:60px 20px;
+}
+.application-card {
+    max-width: 850px;
+    margin: 50px auto;
+    background: var(--bellgrave-green);
+    padding: 50px;
+    border: 2px solid var(--bellgrave-gold);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    color: var(--bellgrave-green);
+}
+.application-card h2 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2rem;
+    color: var(--bellgrave-gold);
+    text-align:center;
+    margin-bottom:40px;
+}
+.application-card label {
+    display:block;
+    font-family:"Libre Baskerville", serif;
+    font-size:1rem;
+    font-weight:bold;
+    color:var(--bellgrave-gold);
+    margin-bottom:8px;
+    letter-spacing:0.5px;
+}
+.application-card input,
+.application-card textarea {
+    width:100%;
+    padding:15px;
+    margin-bottom:25px;
+    background: var(--bellgrave-light-gray);
+    border:1px solid var(--bellgrave-gold);
+    border-radius:5px;
+    font-family:"Libre Baskerville", serif;
+    font-size:1rem;
+    color:var(--bellgrave-charcoal);
+    transition:0.3s ease;
+}
+.application-card input:focus,
+.application-card textarea:focus {
+    outline:none;
+    border:2px solid var(--bellgrave-gold);
+    box-shadow:0 0 10px rgba(176,141,44,0.4);
+}
+.application-card button {
+    display:block;
+    margin:30px auto 0;
+    padding:15px 45px;
+    background:var(--bellgrave-green-light);
+    color:var(--bellgrave-ivory);
+    border:2px solid var(--bellgrave-gold);
+    border-radius:8px;
+    font-family:"Libre Baskerville", serif;
+    font-size:1rem;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+.application-card button:hover {
+    background:var(--bellgrave-green-light);
+    border:2px solid var(--bellgrave-gold);
+    transform:translateY(-3px);
+}
+textarea::placeholder {
+    color:var(--bellgrave-charcoal);
+    font-style:italic;
+}
