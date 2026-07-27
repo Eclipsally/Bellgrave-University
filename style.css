@@ -905,3 +905,111 @@ left:20px;
 flex-direction:column;
 padding-left:40px;
 }
+}
+
+/* ===============================
+ACADEMICS PAGE
+================================ */
+.academics-hero {
+height:85vh;
+background:
+linear-gradient(
+rgba(10,25,15,.75),
+rgba(10,25,15,.75)
+),
+url("images/Bellgrave-background.png");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.academics-overlay h1 {
+font-family:"Cormorant Garamond", serif;
+font-size:4.5rem;
+color:white;
+}
+.academics-overlay p {
+font-family:"Libre Baskerville", serif;
+color:var(--bellgrave-gold);
+font-size:1.3rem;
+}
+.academic-container {
+max-width:1000px;
+margin:auto;
+padding:90px 30px;
+text-align:center;
+}
+.academic-container h2,
+.stereotype-section h2,
+.faculty-section h2 {
+ font-family:"Cormorant Garamond",serif;
+font-size:3rem;
+color:var(--bellgrave-ivory);
+}
+.academic-container p {
+font-family:"Libre Baskerville",serif;
+line-height:2;
+color:var(--bellgrave-ivory);
+}
+.faculty-section {
+background:var(--bellgrave-green-light);
+padding:90px 8%;
+}
+.faculty-section h2 {
+text-align:center;
+margin-bottom:60px;
+}
+.faculty-grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+.faculty-card {
+background:white;
+border:2px solid var(--bellgrave-gold);
+padding:35px;
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+.faculty-card:hover {
+transform:translateY(-8px);
+}
+.faculty-card h3 {
+font-family:"Cormorant Garamond",serif;
+font-size:2rem;
+color:var(--bellgrave-green);
+}
+.faculty-building {
+font-style:italic;
+color:var(--bellgrave-gold);
+}
+.faculty-card p {
+font-family:"Libre Baskerville",serif;
+line-height:1.8;
+color:#444;
+}
+.faculty-info {
+border-top:1px solid var(--bellgrave-charcoal);
+margin-top:20px;
+padding-top:15px;
+font-family:"Inter",sans-serif;
+color:var(--bellgrave-green);
+}
+.stereotype {
+margin-top:20px;
+font-style:italic;
+color:#666!important;
+}
+.stereoype-section {
+background:var(--bellgrave-green-light);
+}
+.quote-box {
+background:var(--bellgrave-green-light);
+border-left:4px solid var(--bellgrave-gold);
+padding:35px;
+margin-top:40px;
+font-family:"Libre Baskerville",serif;
+}
