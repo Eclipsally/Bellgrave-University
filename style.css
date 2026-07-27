@@ -1003,7 +1003,7 @@ margin-top:20px;
 font-style:italic;
 color:#666!important;
 }
-.stereoype-section {
+.stereotype-section {
 background:var(--bellgrave-green-light);
 }
 .quote-box {
@@ -1012,4 +1012,30 @@ border-left:4px solid var(--bellgrave-gold);
 padding:35px;
 margin-top:40px;
 font-family:"Libre Baskerville",serif;
+}
+/* ===============================
+FACULTY FILTER BUTTONS
+================================ */
+.faculty-filters {
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:60px;
+}
+.filter-button {
+background:transparent;
+border:1px solid var(--bellgrave-gold);
+padding:12px 25px;
+font-family:"Libre Baskerville", serif;
+font-size:.9rem;
+color:var(--bellgrave-ivory);
+cursor:pointer;
+transition:.3s ease;
+}
+.filter-button:hover,
+.filter-button.active {
+background:var(--bellgrave-gold);
+color:var(--bellgrave-green);
 }
