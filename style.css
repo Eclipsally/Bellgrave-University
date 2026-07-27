@@ -706,83 +706,202 @@ textarea::placeholder {
     color:var(--bellgrave-gold);
 }
 
-/* ================================
-   APPLICATION SUBMITTED PAGE
-================================ */
-.submitted-page {
-    min-height: calc(100vh - 100px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:
-        linear-gradient(
-            rgba(20, 35, 25, 0.75),
-            rgba(20, 35, 25, 0.75)
-        ),
-        url("images/Bellgrave-background.png");
-    background-size: cover;
-    background-position: center;
-    padding: 60px 20px;
+/* =====================================
+   ABOUT PAGE
+===================================== */
+/* HERO */
+.about-hero {
+height: 85vh;
+background:
+linear-gradient(
+rgba(15,30,20,0.65),
+rgba(15,30,20,0.65)
+),
+url("images/Bellgrave-background.png");
+background-size: cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
-.submitted-card {
-    background: #f8f3e7;
-    max-width: 650px;
-    width: 100%;
-    padding: 55px 65px;
-    text-align: center;
-    border: 2px solid #b9974b;
+.about-overlay {
+    max-width:900px;
+    padding:30px;
+}
+.about-overlay h1 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:4.5rem;
+    font-weight:500;
+    color:white;
+    margin-bottom:20px;
+}
+.about-overlay p {
+    font-family:"Libre Baskerville", serif;
+    color:var(--bellgrave-gold);
+    font-size:1.25rem;
+    line-height:1.8;
+}
+/* GENERAL TEXT SECTIONS */
+.about-container {
+    max-width:1000px;
+    margin:auto;
+    padding:90px 30px;
+    text-align:center;
+}
+.about-container h2 {
+    color: var(--bellgrave-ivory);
+    margin-bottom:35px;
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.2rem;
+    font-weight:500;
+}
+.history-section h2,
+.identity-section h2,
+.philosophy-section h2,
+.integration-section h2,
+.campus-life-section h2 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.2rem;
+    font-weight:500;
+    color:var(--bellgrave-green);
+    margin-bottom:35px;
+}
+.about-container p {
+    font-family:"Libre Baskerville", serif;
+    color:var(--bellgrave-ivory);
+    line-height:2;
+    font-size:1rem;
+    margin-bottom:25px;
+}
+.philosophy-section p,
+.integration-section p {
+    font-family:"Libre Baskerville", serif;
+    color:var(--bellgrave-charcoal);
+    line-height:2;
+    font-size:1rem;
+    margin-bottom:25px;
+}
+.about-container em {
+    color:var(--bellgrave-gold);
+    font-style:italic;
+}
+/* PHILOSOPHY + INTEGRATION */
+.philosophy-section,
+.integration-section {
+    background:var(--bellgrave-ivory);
+    border-top:1px solid rgba(185,151,75,0.35);
+    border-bottom:1px solid rgba(185,151,75,0.35);
+}
+/* HISTORY TIMELINE */
+.history-section {
+    background:white;
+    padding:100px 10%;
+    text-align:center;
+}
+.timeline {
+    max-width:850px;
+    margin:60px auto;
+    position:relative;
+}
+/* golden line */
+.timeline::before {
+    content:"";
+    position:absolute;
+    left:50px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--bellgrave-gold);
+}
+.timeline-item {
+    display:flex;
+    gap:40px;
+    margin-bottom:60px;
+    text-align:left;
+    position:relative;
+}
+.timeline-item span {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2.4rem;
+    color:var(--bellgrave-gold);
+    min-width:120px;
+    background:white;
+    z-index:1;
+}
+.timeline-item h3 {
+    font-family:"Libre Baskerville", serif;
+    color:var(--bellgrave-green);
+    margin-bottom:12px;
+}
+.timeline-item p {
+    font-family:"Libre Baskerville", serif;
+    line-height:1.8;
+    color:#444;
+}
+/* UNIVERSITY IDENTITY */
+.identity-section {
+    background:var(--bellgrave-ivory);
+    padding:100px 10%;
+    text-align:center;
+}
+.identity-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+    max-width:1200px;
+    margin:60px auto 0;
+}
+.identity-card {
+    background:white;
+    border:1px solid rgba(185,151,75,0.6);
+    padding:40px 25px;
+    transition:0.3s ease;
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.35);
-    position: relative;
+    0 10px 30px rgba(0,0,0,0.08);
 }
-.submitted-card img {
-    width: 90px;
-    margin-bottom: 20px;
+.identity-card:hover {
+    transform:translateY(-8px);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.15);
 }
-.submitted-card h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 3rem;
-    color: #183522;
-    margin-bottom: 15px;
+.identity-card h3 {
+    font-family:"Cormorant Garamond", serif;
+    font-size:2rem;
+    color:var(--bellgrave-green);
+    margin-bottom:15px;
 }
-.gold-line {
-    width: 120px;
-    height: 2px;
-    background: #b9974b;
-    margin: 0 auto 30px;
+.identity-card p {
+    font-family:"Libre Baskerville", serif;
+    color:#444;
+    line-height:1.7;
 }
-.submitted-card p {
-    font-family: "Libre Baskerville", serif;
-    color: #3c3c3c;
-    line-height: 1.8;
-    font-size: 1rem;
-    margin-bottom: 20px;
+/* CAMPUS LIFE SECTION */
+.campus-life-section {
+    padding:100px 10%;
+    background:white;
+    text-align:center;
 }
-.submitted-card .main-message {
-    font-size: 1.15rem;
-    color: #183522;
+/* MOBILE */
+@media(max-width:900px){
+.identity-grid{
+grid-template-columns:repeat(2,1fr);
 }
-.signature {
-    margin-top: 35px;
-    font-style: italic;
+.timeline-item{
+gap:20px;
 }
-.signature strong {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.4rem;
-    color: #183522;
 }
-.return-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 35px;
-    background: #183522;
-    color: white;
-    text-decoration: none;
-    font-family: "Inter", sans-serif;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
+@media(max-width:600px){
+.identity-grid{
+grid-template-columns:1fr;
 }
-.return-button:hover {
-    background: #b9974b;
-    color: #183522;
+.about-overlay h1{
+font-size:3rem;
+}
+.timeline::before{
+left:20px;
+}
+.timeline-item{
+flex-direction:column;
+padding-left:40px;
 }
