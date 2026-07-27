@@ -705,3 +705,84 @@ textarea::placeholder {
     letter-spacing:.1rem;
     color:var(--bellgrave-gold);
 }
+
+/* ================================
+   APPLICATION SUBMITTED PAGE
+================================ */
+.submitted-page {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(20, 35, 25, 0.75),
+            rgba(20, 35, 25, 0.75)
+        ),
+        url("images/Bellgrave-background.png");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+}
+.submitted-card {
+    background: #f8f3e7;
+    max-width: 650px;
+    width: 100%;
+    padding: 55px 65px;
+    text-align: center;
+    border: 2px solid #b9974b;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+    position: relative;
+}
+.submitted-card img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+.submitted-card h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: #183522;
+    margin-bottom: 15px;
+}
+.gold-line {
+    width: 120px;
+    height: 2px;
+    background: #b9974b;
+    margin: 0 auto 30px;
+}
+.submitted-card p {
+    font-family: "Libre Baskerville", serif;
+    color: #3c3c3c;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.submitted-card .main-message {
+    font-size: 1.15rem;
+    color: #183522;
+}
+.signature {
+    margin-top: 35px;
+    font-style: italic;
+}
+.signature strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    color: #183522;
+}
+.return-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: #183522;
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+.return-button:hover {
+    background: #b9974b;
+    color: #183522;
+}
